@@ -152,7 +152,7 @@ def handle_client(client_socket) -> None:
                     email_data += b"=" * 80 + b"\n"
 
                     logging.info(f"incoming DATA from {client_name}, writing to file")
-                    with open("received_mails.txt", "a") as file:
+                    with open("received_mails.log", "a") as file:
                         file.write(email_data.decode(__coding__))
 
                     logging.info(f"outgoing DATA to {client_name}, response: 250 Ok")
